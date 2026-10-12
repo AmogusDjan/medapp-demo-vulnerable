@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Поиск врачей</h2>
+<form method="get">
+    <input type="text" name="q" value="{{ search }}" placeholder="ФИО или специальность">
+    <button type="submit">Найти</button>
+</form>
+
+{% if doctors %}
+<table border="1" cellpadding="6">
+    <tr><th>ID</th><th>ФИО</th><th>Специальность</th></tr>
+    {% for d in doctors %}
+    <tr><td>{{ d.id }}</td><td>{{ d.full_name }}</td><td>{{ d.specialty }}</td></tr>
+    {% endfor %}
+</table>
+{% else %}
+<p>Ничего не найдено.</p>
+{% endif %}
+{% endblock %}

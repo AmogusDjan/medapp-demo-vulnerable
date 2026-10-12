@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Здравствуйте, {{ user.full_name }}!</h2>
+<p>Телефон: {{ user.phone }} | Email: {{ user.email }} | Полис: {{ user.policy }}</p>
+
+<h3>Мои записи на приём</h3>
+{% if appointments %}
+<table border="1" cellpadding="6">
+    <tr><th>Дата</th><th>Врач</th><th>Специальность</th><th>Диагноз</th><th></th></tr>
+    {% for a in appointments %}
+    <tr>
+        <td>{{ a.date }}</td>
+        <td>{{ a.doctor_name }}</td>
+        <td>{{ a.specialty }}</td>
+        <td>{{ a.diagnosis }}</td>
+        <td><a href="{{ url_for('appointment', appointment_id=a.id) }}">Открыть (id={{ a.id }})</a></td>
+    </tr>
+    {% endfor %}
+</table>
+{% else %}
+<p>Записей нет.</p>
+{% endif %}
+
+<h3>Записаться к врачу</h3>
+<form method="post" action="{{ url_for('book') }}">
+    <label>ID врача: <input type="number" name="doctor_id" required></label>
+    <label>Дата: <input type="date" name="date" required></label>
+    <button type="submit">Записаться</button>
+</form>
+<p><i>Список врачей — во вкладке «Врачи»</i></p>
+{% endblock %}

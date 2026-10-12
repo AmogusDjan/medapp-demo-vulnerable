@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Запись №{{ appt.id }}</h2>
+<p><b>Пациент:</b> {{ appt.patient_name }}</p>
+<p><b>Полис:</b> {{ appt.policy }}</p>
+<p><b>Телефон:</b> {{ appt.phone }}</p>
+<hr>
+<p><b>Врач:</b> {{ appt.doctor_name }} ({{ appt.specialty }})</p>
+<p><b>Дата:</b> {{ appt.date }}</p>
+<p><b>Диагноз:</b> {{ appt.diagnosis }}</p>
+<p><b>Назначения:</b> {{ appt.prescription }}</p>
+{% endblock %}

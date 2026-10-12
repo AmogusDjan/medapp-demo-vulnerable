@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Вход в личный кабинет</h2>
+<form method="post">
+    <label>Логин: <input type="text" name="username" required></label><br>
+    <label>Пароль: <input type="password" name="password" required></label><br>
+    <button type="submit">Войти</button>
+</form>
+<p>Тестовые аккаунты: <b>ivanov / pass123</b> и <b>petrova / qwerty</b></p>
+{% endblock %}

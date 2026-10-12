@@ -1,0 +1,8 @@
+body { font-family: Arial, sans-serif; max-width: 900px; margin: 20px auto; padding: 0 20px; color: #222; }
+header { background: #0077cc; color: #fff; padding: 10px 20px; border-radius: 8px; margin-bottom: 20px; }
+header a { color: #fff; margin-right: 15px; text-decoration: none; }
+header h1 a { font-size: 1.4em; }
+main { background: #fafafa; padding: 20px; border-radius: 8px; }
+table { border-collapse: collapse; width: 100%; margin: 10px 0; }
+th { background: #eef; }
+input, button { padding: 6px 10px; margin: 4px 0; }

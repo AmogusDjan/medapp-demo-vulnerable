@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Профиль</h2>
+<p><b>ФИО:</b> {{ user.full_name }}</p>
+<p><b>Полис:</b> {{ user.policy }}</p>
+
+<h3>Изменить контакты</h3>
+<form method="post">
+    <label>Телефон: <input type="text" name="phone" value="{{ user.phone }}"></label><br>
+    <label>Email: <input type="email" name="email" value="{{ user.email }}"></label><br>
+    <button type="submit">Сохранить</button>
+</form>
+{% endblock %}

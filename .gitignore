@@ -1,0 +1,19 @@
+# База данных (создаётся локально через init_db.py)
+medapp.db
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# IDE и редакторы
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# Логи
+*.log
